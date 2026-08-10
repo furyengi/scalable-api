@@ -3,8 +3,11 @@ line-length = 140
 target-version = "py312"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B"]
+select = ["E", "F", "UP", "B"]
 ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"alembic/env.py" = ["F401"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
